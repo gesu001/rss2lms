@@ -11,6 +11,10 @@ This repository currently contains **Assessment 1 (Frontend Design & Usability)*
 
 Backend RSS ingestion and LMS synchronization are not implemented in this repository yet.
 
+## Live Deployment
+
+- [RSS2LMS](https://rss2lms.vercel.app/)
+
 ## Tech Stack
 
 - Next.js 16 (App Router)
