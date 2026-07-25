@@ -23,6 +23,15 @@ export default function Footer() {
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Built with React & Next.js
             </p>
+            <a
+              href="https://github.com/gesu001/rss2lms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+              aria-label="Open RSS2LMS GitHub repository"
+            >
+              GitHub Repository
+            </a>
           </div>
         </div>
       </div>
