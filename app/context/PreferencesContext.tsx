@@ -52,11 +52,28 @@ function getInitialPreferences(): UserPreferences {
 }
 
 export function PreferencesProvider({ children }: { children: React.ReactNode }) {
-  const [preferences, setPreferences] = useState<UserPreferences>(getInitialPreferences);
+  const [preferences, setPreferences] = useState<UserPreferences>(defaultPreferences);
+
+  useEffect(() => {
+    setPreferences(getInitialPreferences());
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('preferences', JSON.stringify(preferences));
   }, [preferences]);
+
+  useEffect(() => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
+    const root = document.documentElement;
+    root.classList.toggle('compact-layout', preferences.compactLayout);
+
+    return () => {
+      root.classList.remove('compact-layout');
+    };
+  }, [preferences.compactLayout]);
 
   const setPreference = <K extends keyof UserPreferences>(key: K, value: UserPreferences[K]) => {
     setPreferences((current) => ({

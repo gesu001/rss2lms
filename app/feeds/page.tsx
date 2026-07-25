@@ -85,7 +85,7 @@ export default function FeedsPage() {
       {/* Filters and Content */}
       <section className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${spacingClass}`}>
         {/* Summary */}
-        <div className={`${summaryClass} bg-blue-50 dark:bg-slate-800 rounded-lg border border-blue-200 dark:border-slate-700`}>
+        <div className={`favorites-filter-panel ${summaryClass} bg-blue-50 dark:bg-slate-800 rounded-lg border border-blue-200 dark:border-slate-700`}>
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div>
               <p className="text-gray-700 dark:text-gray-300">
@@ -99,80 +99,90 @@ export default function FeedsPage() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2">
-              <label
-                htmlFor="filterCategory"
-                className="text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide"
-              >
-                Category
-              </label>
-              <select
-                id="filterCategory"
-                value={categoryFilter}
-                onChange={(e) => setCategoryFilter(e.target.value as CategoryFilter)}
-                className="px-3 py-1.5 rounded-lg text-sm font-medium bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                aria-label="Filter posts by category"
-              >
-                {categories.map((category) => (
-                  <option key={category} value={category}>
-                    {category === 'all' ? 'All' : category}
-                  </option>
-                ))}
-              </select>
+            <div className="w-full lg:w-auto lg:min-w-140">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+                <div className="rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 p-2.5">
+                  <label
+                    htmlFor="filterCategory"
+                    className="favorites-filter-label mb-1 block text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide"
+                  >
+                    Category
+                  </label>
+                  <select
+                    id="filterCategory"
+                    value={categoryFilter}
+                    onChange={(e) => setCategoryFilter(e.target.value as CategoryFilter)}
+                    className="favorites-filter-select w-full px-3 py-2 rounded-lg text-sm font-medium bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    aria-label="Filter posts by category"
+                  >
+                    {categories.map((category) => (
+                      <option key={category} value={category}>
+                        {category === 'all' ? 'All' : category}
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
-              <label
-                htmlFor="sortPosts"
-                className="text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide"
-              >
-                Sort
-              </label>
-              <select
-                id="sortPosts"
-                value={sortMode}
-                onChange={(e) => setSortMode(e.target.value as SortMode)}
-                className="px-3 py-1.5 rounded-lg text-sm font-medium bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                aria-label="Sort posts"
-              >
-                <option value="latest">Latest</option>
-                <option value="oldest">Oldest</option>
-              </select>
+                <div className="rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 p-2.5">
+                  <label
+                    htmlFor="sortPosts"
+                    className="favorites-filter-label mb-1 block text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide"
+                  >
+                    Sort
+                  </label>
+                  <select
+                    id="sortPosts"
+                    value={sortMode}
+                    onChange={(e) => setSortMode(e.target.value as SortMode)}
+                    className="favorites-filter-select w-full px-3 py-2 rounded-lg text-sm font-medium bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    aria-label="Sort posts"
+                  >
+                    <option value="latest">Latest</option>
+                    <option value="oldest">Oldest</option>
+                  </select>
+                </div>
 
-              <span className="ml-2 text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide">View</span>
-              <button
-                type="button"
-                onClick={() => setViewMode('card')}
-                className={`inline-flex items-center justify-center w-9 h-9 rounded-lg transition-colors ${
-                  viewMode === 'card'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-600'
-                }`}
-                aria-label="Card view"
-                title="Card view"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
-                  <rect x="3" y="4" width="8" height="7" rx="1.5" />
-                  <rect x="13" y="4" width="8" height="7" rx="1.5" />
-                  <rect x="3" y="13" width="8" height="7" rx="1.5" />
-                  <rect x="13" y="13" width="8" height="7" rx="1.5" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={() => setViewMode('list')}
-                className={`inline-flex items-center justify-center w-9 h-9 rounded-lg transition-colors ${
-                  viewMode === 'list'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-600'
-                }`}
-                aria-label="List view"
-                title="List view"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5" aria-hidden="true">
-                  <line x1="4" y1="7" x2="20" y2="7" />
-                  <line x1="4" y1="12" x2="20" y2="12" />
-                  <line x1="4" y1="17" x2="20" y2="17" />
-                </svg>
-              </button>
+                <div className="rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 p-2.5 sm:col-span-2 xl:col-span-1">
+                  <span className="favorites-filter-label mb-1 block text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide">View</span>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('card')}
+                      className={`inline-flex items-center justify-center h-10 rounded-lg border transition-colors ${
+                        viewMode === 'card'
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-slate-600 hover:bg-gray-100 dark:hover:bg-slate-600'
+                      }`}
+                      aria-label="Card view"
+                      title="Card view"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
+                        <rect x="3" y="4" width="8" height="7" rx="1.5" />
+                        <rect x="13" y="4" width="8" height="7" rx="1.5" />
+                        <rect x="3" y="13" width="8" height="7" rx="1.5" />
+                        <rect x="13" y="13" width="8" height="7" rx="1.5" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('list')}
+                      className={`inline-flex items-center justify-center h-10 rounded-lg border transition-colors ${
+                        viewMode === 'list'
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-slate-600 hover:bg-gray-100 dark:hover:bg-slate-600'
+                      }`}
+                      aria-label="List view"
+                      title="List view"
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5" aria-hidden="true">
+                        <line x1="4" y1="7" x2="20" y2="7" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="17" x2="20" y2="17" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

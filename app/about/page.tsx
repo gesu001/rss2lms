@@ -14,7 +14,7 @@ export default function AboutPage() {
       {/* Main Content */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Student Information */}
-        <div className="mb-12 p-6 bg-blue-50 dark:bg-slate-800 rounded-lg border-l-4 border-blue-600 dark:border-blue-400">
+        <div className="about-focus-card mb-12 p-6 bg-purple-50 dark:bg-slate-800 rounded-lg border-l-4 border-purple-600 dark:border-purple-400">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Student Information</h2>
           <dl className="space-y-3">
             <div className="flex">
@@ -24,6 +24,10 @@ export default function AboutPage() {
             <div className="flex">
               <dt className="font-semibold text-gray-700 dark:text-gray-300 w-32">Student ID:</dt>
               <dd className="text-gray-700 dark:text-gray-300">21724222</dd>
+            </div>
+            <div className="flex">
+              <dt className="font-semibold text-gray-700 dark:text-gray-300 w-32">Subject:</dt>
+              <dd className="text-gray-700 dark:text-gray-300">2026-CSE5006-T4-W - Cloud-Base Web Application</dd>
             </div>
             <div className="flex">
               <dt className="font-semibold text-gray-700 dark:text-gray-300 w-32">Assessment:</dt>
@@ -58,11 +62,11 @@ export default function AboutPage() {
           </div>
           
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-            <strong>Student:</strong> Ge Su | <strong>Student ID:</strong> 21724222 | <strong>Assessment 1:</strong> Frontend Design & Usability
+            <strong>Student:</strong> Ge Su | <strong>Student ID:</strong> 21724222 | <strong>Subject:</strong> Cloud-Base Web Application | <strong>Assessment 1:</strong> Frontend Design & Usability
           </p>
           
-          <div className="about-video-note mt-4 p-4 bg-blue-50 dark:bg-blue-900 rounded-lg border border-blue-200 dark:border-blue-700">
-            <p className="about-video-note-text text-sm text-blue-900 dark:text-blue-100">
+          <div className="about-video-note mt-4 p-4 bg-purple-50 dark:bg-purple-900 rounded-lg border border-purple-200 dark:border-purple-700">
+            <p className="about-video-note-text text-sm text-purple-900 dark:text-purple-100">
               <strong>Note:</strong> This video placeholder will be replaced with your actual demo video. 
               Upload your 3-8 minute walkthrough to YouTube, Loom, or Vimeo and update the iframe src.
             </p>
@@ -74,13 +78,13 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Project Overview</h2>
           <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
-              <strong>RSS2LMS</strong> is an application that bridges the gap between RSS feed content and learning management systems.
+              <strong>RSS2LMS</strong> is an application that bridges the gap between RSS (Really Simple Syndication) feed content and Learning Management Systems (LMS).
               The goal is to enable educators to easily aggregate content from multiple sources and deliver it to learners in a
               unified, intuitive interface.
             </p>
             <p>
-              RSS (Really Simple Syndication) allows content creators to publish updates that can be automatically aggregated by readers.
-              By integrating RSS feeds with learning management systems, we create a seamless content delivery pipeline that:
+              RSS allows content creators to publish updates that can be automatically aggregated by readers.
+              By integrating RSS feeds with LMS, we create a seamless content delivery pipeline that:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>Aggregates content from multiple educational sources</li>
@@ -89,66 +93,6 @@ export default function AboutPage() {
               <li>Enables content discovery and organization</li>
               <li>Supports different learning styles and preferences</li>
             </ul>
-          </div>
-        </div>
-
-        {/* Assessment 1 Scope */}
-        <div className="about-focus-card mb-12 p-6 bg-green-50 dark:bg-slate-800 rounded-lg border border-green-200 dark:border-slate-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Assessment 1: Frontend Focus</h2>
-          <div className="space-y-4 text-gray-700 dark:text-gray-300">
-            <p>
-              <strong>Assessment 1 focuses exclusively on frontend design and usability.</strong> The backend RSS feed processing
-              will be implemented in Assessment 2. This allows us to create a user-centric interface first, then integrate it with
-              real data sources.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4 mt-4">
-              <div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2">✅ Included in Assessment 1:</h3>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Responsive UI design</li>
-                  <li>Component architecture</li>
-                  <li>Light/Dark theme support</li>
-                  <li>Navigation and menu systems</li>
-                  <li>Sample content display</li>
-                  <li>Accessibility features</li>
-                  <li>User preference storage</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2">⏳ Deferred to Assessment 2+:</h3>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>RSS feed ingestion</li>
-                  <li>Backend API development</li>
-                  <li>Database integration</li>
-                  <li>LMS synchronization</li>
-                  <li>Real-time updates</li>
-                  <li>User authentication</li>
-                  <li>Advanced analytics</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Future Vision */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Future Vision (Assessment 2 & Beyond)</h2>
-          <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
-            <p>
-              Assessment 2 will introduce the backend server component, enabling the application to:
-            </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Accept RSS feeds:</strong> Support multiple RSS source configurations</li>
-              <li><strong>Process content:</strong> Parse, validate, and normalize RSS feed data</li>
-              <li><strong>Store content:</strong> Persist feed data in a database</li>
-              <li><strong>Deliver to LMS:</strong> Integrate with popular learning management systems</li>
-              <li><strong>Track engagement:</strong> Monitor learner interaction with content</li>
-              <li><strong>Manage updates:</strong> Handle real-time feed updates and notifications</li>
-            </ul>
-            <p className="mt-6">
-              Later assessments will add authentication, advanced analytics, Docker containerization, cloud deployment,
-              and automated testing to create a production-ready educational platform.
-            </p>
           </div>
         </div>
 
@@ -179,21 +123,17 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Key Features */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Assessment 1 Features</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {features.map((feature) => (
-              <div
-                key={feature.id}
-                className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg"
-              >
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+        {/* Next Step */}
+        <div className="mb-12 p-6 bg-gray-50 dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Next Step</h2>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            The immediate next step is to implement the backend RSS service: accept and validate feed URLs,
+            parse and normalize feed items, and expose them through API endpoints for this frontend. After that,
+            the project will add LMS synchronization and persistent storage so real educational content can flow
+            from RSS sources into the learner interface.
+          </p>
         </div>
+
       </section>
     </div>
   );

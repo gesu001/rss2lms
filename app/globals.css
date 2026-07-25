@@ -150,18 +150,18 @@ html.dark .nav-mobile-link:hover {
 
 /* About page dark-mode contrast fixes */
 html.dark .about-focus-card {
-  background-color: rgb(30, 41, 59) !important;
-  border-color: rgb(51, 65, 85) !important;
+  background-color: rgb(76, 29, 149) !important;
+  border-color: rgb(109, 40, 217) !important;
 }
 
 html.dark .about-video-note {
-  background-color: rgb(30, 58, 138) !important;
-  border-color: rgb(29, 78, 216) !important;
+  background-color: rgb(88, 28, 135) !important;
+  border-color: rgb(126, 34, 206) !important;
 }
 
 html.dark .about-video-note-text,
 html.dark .about-video-note-text strong {
-  color: rgb(219, 234, 254) !important;
+  color: rgb(243, 232, 255) !important;
 }
 
 /* Home page dark-mode CTA contrast fix */
@@ -177,15 +177,15 @@ html.dark .learn-more-btn:hover {
 
 /* Settings page accessibility block dark-mode contrast fix */
 html.dark .settings-accessibility-card {
-  background-color: rgb(30, 58, 138) !important;
-  border-color: rgb(30, 64, 175) !important;
+  background-color: rgb(19, 78, 74) !important;
+  border-color: rgb(15, 118, 110) !important;
 }
 
 html.dark .settings-accessibility-heading,
 html.dark .settings-accessibility-list,
 html.dark .settings-accessibility-list li,
 html.dark .settings-accessibility-note {
-  color: rgb(219, 234, 254) !important;
+  color: rgb(204, 251, 241) !important;
 }
 
 /* Favorites page filter panel dark-mode contrast fix */
@@ -207,6 +207,58 @@ html.dark .favorites-filter-select {
 html.dark .favorites-filter-select option {
   background-color: rgb(51, 65, 85) !important;
   color: rgb(241, 245, 249) !important;
+}
+
+/* Global compact layout mode (applies to all pages) */
+html.compact-layout header .py-3 {
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+}
+
+html.compact-layout .theme-toggle-btn {
+  font-size: 0.8125rem !important;
+  padding: 0.35rem 0.65rem !important;
+}
+
+html.compact-layout nav .h-16 {
+  height: 3.25rem !important;
+}
+
+html.compact-layout .bg-linear-to-r.py-12,
+html.compact-layout main section.py-12 {
+  padding-top: 1.75rem !important;
+  padding-bottom: 1.75rem !important;
+}
+
+html.compact-layout main section.py-16,
+html.compact-layout main section.sm\:py-24 {
+  padding-top: 2.25rem !important;
+  padding-bottom: 2.25rem !important;
+}
+
+html.compact-layout main .mb-12 {
+  margin-bottom: 2rem !important;
+}
+
+html.compact-layout main .p-6 {
+  padding: 1rem !important;
+}
+
+html.compact-layout main .text-4xl {
+  font-size: 2rem !important;
+}
+
+html.compact-layout main .text-5xl {
+  font-size: 2.5rem !important;
+}
+
+html.compact-layout footer .py-8 {
+  padding-top: 1.1rem !important;
+  padding-bottom: 1.1rem !important;
+}
+
+html.compact-layout footer .gap-4 {
+  gap: 0.5rem !important;
 }
 
 @layer utilities {
