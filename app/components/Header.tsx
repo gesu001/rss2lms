@@ -1,6 +1,7 @@
 'use client';
 
 import { useTheme } from '@/app/context/ThemeContext';
+import Link from 'next/link';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -11,11 +12,14 @@ export default function Header() {
         <div className="flex justify-between items-center gap-3 py-3 sm:py-0 sm:h-16">
           <div className="min-w-0 flex-1">
             <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white truncate">
-              RSS2LMS
+              <Link
+                href="/"
+                className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                aria-label="Go to homepage"
+              >
+                RSS2LMS
+              </Link>
             </h1>
-            <p className="hidden md:block text-xs text-gray-600 dark:text-gray-400 truncate">
-              Assessment 1 - Frontend Design & Usability
-            </p>
           </div>
           <button
             onClick={toggleTheme}

@@ -24,10 +24,10 @@ export default function SettingsPage() {
   return (
     <div className="flex-1 w-full bg-white dark:bg-black">
       {/* Page Header */}
-      <section className="bg-linear-to-r from-orange-600 to-orange-800 dark:from-orange-900 dark:to-orange-950 text-white py-12">
+      <section className="bg-linear-to-r from-teal-600 to-cyan-700 dark:from-teal-900 dark:to-cyan-950 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Settings</h1>
-          <p className="text-lg text-orange-100">
+          <p className="text-lg text-teal-100">
             Customize your RSS2LMS experience
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function SettingsPage() {
               </p>
               <button
                 onClick={toggleTheme}
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-slate-800"
+                className="px-6 py-3 bg-teal-600 hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-600 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 dark:focus:ring-offset-slate-800"
                 aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
               >
                 {theme === 'light' ? '🌙 Switch to Dark Mode' : '☀️ Switch to Light Mode'}
@@ -80,10 +80,10 @@ export default function SettingsPage() {
                   type="checkbox"
                   checked={preferences.compactLayout}
                   onChange={(e) => handlePreferenceChange('compactLayout', e.target.checked)}
-                  className="w-4 h-4 rounded border-gray-300 dark:border-slate-600 text-blue-600"
+                  className="w-4 h-4 rounded border-gray-300 dark:border-slate-600 text-teal-600"
                   aria-label="Enable compact layout"
                 />
-                <span className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <span className="font-semibold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   Compact Layout
                 </span>
               </label>
@@ -98,10 +98,10 @@ export default function SettingsPage() {
                   type="checkbox"
                   checked={preferences.showReadTime}
                   onChange={(e) => handlePreferenceChange('showReadTime', e.target.checked)}
-                  className="w-4 h-4 rounded border-gray-300 dark:border-slate-600 text-blue-600"
+                  className="w-4 h-4 rounded border-gray-300 dark:border-slate-600 text-teal-600"
                   aria-label="Show estimated read time"
                 />
-                <span className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <span className="font-semibold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   Show Read Time Estimates
                 </span>
               </label>
@@ -135,9 +135,9 @@ export default function SettingsPage() {
         </div>
 
         {/* Accessibility Settings */}
-        <div className="settings-accessibility-card p-6 bg-blue-50 dark:bg-blue-900 rounded-lg border border-blue-200 dark:border-blue-800">
-          <h2 className="settings-accessibility-heading text-2xl font-bold text-blue-900 dark:text-blue-100 mb-4">Accessibility</h2>
-          <ul className="settings-accessibility-list space-y-2 text-blue-900 dark:text-blue-100">
+        <div className="settings-accessibility-card p-6 bg-teal-50 dark:bg-teal-900 rounded-lg border border-teal-200 dark:border-teal-800">
+          <h2 className="settings-accessibility-heading text-2xl font-bold text-teal-900 dark:text-teal-100 mb-4">Accessibility</h2>
+          <ul className="settings-accessibility-list space-y-2 text-teal-900 dark:text-teal-100">
             <li>✓ Full keyboard navigation support</li>
             <li>✓ WCAG AA color contrast compliance</li>
             <li>✓ Semantic HTML structure</li>
@@ -145,7 +145,7 @@ export default function SettingsPage() {
             <li>✓ Focus indicators on all interactive elements</li>
             <li>✓ Responsive text sizing</li>
           </ul>
-          <p className="settings-accessibility-note text-sm text-blue-800 dark:text-blue-200 mt-4">
+          <p className="settings-accessibility-note text-sm text-teal-800 dark:text-teal-200 mt-4">
             If you encounter any accessibility issues, please report them so we can improve the experience for all users.
           </p>
         </div>
