@@ -33,7 +33,11 @@ function getInitialFavorites(): string[] {
 }
 
 export function FavoritesProvider({ children }: { children: React.ReactNode }) {
-  const [favoriteIds, setFavoriteIds] = useState<string[]>(getInitialFavorites);
+  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    setFavoriteIds(getInitialFavorites());
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('favoritePosts', JSON.stringify(favoriteIds));

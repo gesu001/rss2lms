@@ -52,7 +52,11 @@ function getInitialPreferences(): UserPreferences {
 }
 
 export function PreferencesProvider({ children }: { children: React.ReactNode }) {
-  const [preferences, setPreferences] = useState<UserPreferences>(getInitialPreferences);
+  const [preferences, setPreferences] = useState<UserPreferences>(defaultPreferences);
+
+  useEffect(() => {
+    setPreferences(getInitialPreferences());
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('preferences', JSON.stringify(preferences));
