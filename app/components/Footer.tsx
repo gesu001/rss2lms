@@ -13,10 +13,10 @@ export default function Footer() {
           </div>
           <div className="text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              © 2026 RSS2LMS Assessment 1
+              © 2026-CSE5006-T4-W - Cloud-Base Web Application
             </p>
             <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-              Frontend Design & Usability
+              RSS2LMS
             </p>
           </div>
           <div className="text-center sm:text-right">
