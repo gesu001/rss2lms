@@ -1,4 +1,4 @@
-git 'use client';
+'use client';
 
 import { useTheme } from '@/app/context/ThemeContext';
 
