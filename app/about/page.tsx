@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="relative w-full pt-[56.25%] bg-gray-900 dark:bg-gray-950 rounded-lg overflow-hidden shadow-lg border-2 border-dashed border-gray-400 dark:border-gray-600">
             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-gray-900 dark:bg-gray-950">
               <iframe
-                src="https://latrobeuni-my.sharepoint.com/personal/21724222_students_ltu_edu_au/_layouts/15/embed.aspx?UniqueId=e1e10b4a-9815-438f-b2ca-38d67abcce79&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                src="https://drive.google.com/file/d/1G_JT6RBLg6wPeBr0LLPbovLd253Pm3dh/preview"
                 className="absolute top-0 left-0 w-full h-full"
                 style={{ border: 0 }}
                 allowFullScreen
