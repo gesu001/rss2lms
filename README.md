@@ -11,6 +11,10 @@ This repository currently contains **Assessment 1 (Frontend Design & Usability)*
 
 Backend RSS ingestion and LMS synchronization are not implemented in this repository yet.
 
+## GitHub Repository
+
+- [gesu001/rss2lms](https://github.com/gesu001/rss2lms)
+
 ## Live Deployment
 
 - [RSS2LMS](https://rss2lms.vercel.app/)
@@ -39,35 +43,24 @@ npm install
 Run the development server:
 
 ```bash
-npm run dev
+npx next dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
-
-## Stop the Dev Server
-
-`npm run dev` starts one Next.js process that serves both:
+Open the web application:
 
 - Local URL (`http://localhost:3000`)
 - Network URL (for example `http://192.168.56.1:3000`)
 
-To stop both, stop that single process:
+## Stop the Dev Server
 
-1. In the same terminal, press `Ctrl + C`
-2. If the original terminal is no longer available, kill the process by PID:
+- In the same terminal, press `Ctrl + C`
 
-```bash
-MSYS2_ARG_CONV_EXCL='*' taskkill /PID <pid> /F
-```
+## Development Command
 
-Notes:
+- `npx next dev` - Start Next.js in development mode
 
-- In Git Bash on Windows, `MSYS2_ARG_CONV_EXCL='*'` prevents argument conversion issues with `taskkill` flags.
-- You do not need separate kill commands for local and network URLs.
+## Available npm Scripts
 
-## Available Scripts
-
-- `npm run dev` - Start Next.js in development mode
 - `npm run build` - Create a production build
 - `npm run start` - Run the production server
 - `npm run lint` - Run ESLint checks
