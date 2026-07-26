@@ -198,6 +198,7 @@ export default function FeedsPage() {
               viewMode={viewMode}
               isFavorite={isFavorite(post.id)}
               onToggleFavorite={toggleFavorite}
+              detailContext="feeds"
             />
           ))}
         </div>

@@ -102,7 +102,7 @@ export default function FavoritesPage() {
               </p>
             </div>
 
-            <div className="w-full lg:w-auto lg:min-w-[560px]">
+            <div className="w-full lg:w-auto lg:min-w-140">
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
                 <div className="rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 p-2.5">
                   <label
@@ -200,6 +200,7 @@ export default function FavoritesPage() {
               viewMode={viewMode}
               isFavorite={isFavorite(post.id)}
               onToggleFavorite={toggleFavorite}
+              detailContext="favorites"
             />
           ))}
         </div>

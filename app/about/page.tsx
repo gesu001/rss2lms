@@ -45,19 +45,16 @@ export default function AboutPage() {
             Watch this walkthrough to see how to navigate and use the RSS2LMS application, including theme switching, menu navigation, and key features.
           </p>
           
-          {/* Video Placeholder */}
+          {/* Video Embed */}
           <div className="relative w-full pt-[56.25%] bg-gray-900 dark:bg-gray-950 rounded-lg overflow-hidden shadow-lg border-2 border-dashed border-gray-400 dark:border-gray-600">
             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-gray-900 dark:bg-gray-950">
-              <div className="text-center text-white p-6">
-                <div className="text-6xl mb-4">🎬</div>
-                <h3 className="text-2xl font-bold mb-2">Video Coming Soon</h3>
-                <p className="text-gray-300 mb-4">
-                  Student: Ge Su | Student ID: 21724222
-                </p>
-                <p className="text-gray-400">
-                  Replace this placeholder with your video once recorded and uploaded to YouTube, Loom, or Vimeo.
-                </p>
-              </div>
+              <iframe
+                src="https://latrobeuni-my.sharepoint.com/personal/21724222_students_ltu_edu_au/_layouts/15/embed.aspx?UniqueId=e1e10b4a-9815-438f-b2ca-38d67abcce79&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                className="absolute top-0 left-0 w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen
+                title="rss2llm_frontend.mp4"
+              />
             </div>
           </div>
           
@@ -65,12 +62,6 @@ export default function AboutPage() {
             <strong>Student:</strong> Ge Su | <strong>Student ID:</strong> 21724222 | <strong>Subject:</strong> Cloud-Base Web Application | <strong>Assessment 1:</strong> Frontend Design & Usability
           </p>
           
-          <div className="about-video-note mt-4 p-4 bg-purple-50 dark:bg-purple-900 rounded-lg border border-purple-200 dark:border-purple-700">
-            <p className="about-video-note-text text-sm text-purple-900 dark:text-purple-100">
-              <strong>Note:</strong> This video placeholder will be replaced with your actual demo video. 
-              Upload your 3-8 minute walkthrough to YouTube, Loom, or Vimeo and update the iframe src.
-            </p>
-          </div>
         </div>
 
         {/* Project Overview */}
@@ -138,42 +129,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-const features = [
-  {
-    id: 1,
-    title: '📱 Responsive Design',
-    description:
-      'Seamless experience across mobile, tablet, and desktop devices with mobile-first approach.',
-  },
-  {
-    id: 2,
-    title: '🎨 Light & Dark Themes',
-    description:
-      'Easy theme switching with automatic detection and persistent user preferences.',
-  },
-  {
-    id: 3,
-    title: '🧭 Intuitive Navigation',
-    description:
-      'Hamburger menu for mobile, clear breadcrumbs, and organized page structure.',
-  },
-  {
-    id: 4,
-    title: '♿ Accessibility',
-    description:
-      'WCAG compliance with semantic HTML, ARIA labels, and keyboard navigation support.',
-  },
-  {
-    id: 5,
-    title: '📖 Component Architecture',
-    description:
-      'Reusable, modular components following React best practices for maintainability.',
-  },
-  {
-    id: 6,
-    title: '💾 Local Storage',
-    description:
-      'User preferences and theme selection persisted using browser local storage.',
-  },
-];

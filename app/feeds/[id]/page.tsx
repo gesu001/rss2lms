@@ -6,6 +6,9 @@ interface PageParams {
   params: Promise<{
     id: string;
   }>;
+  searchParams: Promise<{
+    from?: string;
+  }>;
 }
 
 export function generateStaticParams() {
@@ -14,9 +17,14 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function PostPage({ params }: PageParams) {
+export default async function PostPage({ params, searchParams }: PageParams) {
   const { id } = await params;
+  const { from } = await searchParams;
   const post = blogPosts.find((p) => p.id === id);
+
+  const fromFavorites = from === 'favorites';
+  const backHref = fromFavorites ? '/favorites' : '/feeds';
+  const backLabel = fromFavorites ? '← Back to My Favorites' : '← Back to Feeds';
 
   if (!post) {
     notFound();
@@ -34,11 +42,11 @@ export default async function PostPage({ params }: PageParams) {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-8">
           <Link
-            href="/feeds"
+            href={backHref}
             className="inline-block mb-6 text-blue-600 dark:text-blue-400 hover:text-blue-800 
               dark:hover:text-blue-300 font-medium transition-colors"
           >
-            ← Back to Feeds
+            {backLabel}
           </Link>
 
           <div className="flex flex-wrap gap-2 mb-4">

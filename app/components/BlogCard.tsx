@@ -10,6 +10,7 @@ interface BlogCardProps {
   viewMode: 'card' | 'list';
   isFavorite: boolean;
   onToggleFavorite: (id: string) => void;
+  detailContext?: 'feeds' | 'favorites';
 }
 
 export default function BlogCard({
@@ -19,7 +20,10 @@ export default function BlogCard({
   viewMode,
   isFavorite,
   onToggleFavorite,
+  detailContext = 'feeds',
 }: BlogCardProps) {
+  const detailHref = `/feeds/${post.id}?from=${detailContext}`;
+
   const formattedDate = new Date(post.date).toLocaleDateString('en-AU', {
     year: 'numeric',
     month: 'long',
@@ -95,7 +99,7 @@ export default function BlogCard({
               </svg>
             </button>
             <Link
-              href={`/feeds/${post.id}`}
+              href={detailHref}
               className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 
                 dark:bg-blue-700 dark:hover:bg-blue-600 text-white font-medium rounded-lg 
                 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 
@@ -174,7 +178,7 @@ export default function BlogCard({
         </p>
 
         <Link
-          href={`/feeds/${post.id}`}
+          href={detailHref}
           className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 
             dark:bg-blue-700 dark:hover:bg-blue-600 text-white font-medium rounded-lg 
             transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 
